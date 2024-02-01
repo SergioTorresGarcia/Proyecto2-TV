@@ -20,13 +20,14 @@
                     <img src="./img/TV2.png" alt="old school TV">
                     <div id="image"></div> <!-- ----------------------------- MAIN PICTURE - PROGRAMES -->
                 </div>
-                <div id="displayLine">
-                    <div class="display" id="displayChannel"></div>
-                    <div class="display" id="displayTime"></div>
-                    <div class="display" id="displayDay"></div>
-                </div>
+                
 
             </div>
+            <div id="displayLine">     <!-- ----------------------------- INFORMATION - Channel / Time / Date -->
+                    <div class="display" id="displayChannel">CHANNEL 4</div>
+                    <div class="display" id="displayDay">07 / 02 / 24</div>
+                    <div class="display" id="displayTime">00 : 00 : AM</div>
+                </div>
 
         </div>
 
@@ -55,7 +56,7 @@
                                 </button></a>
                         </div>
                         <div class="colbtn">
-                            <a href="#"><button>
+                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 1'">
                                 <div class="btn" id="btn1">
                                     <div>CH</div>
                                     <div class="numbers">1</div>

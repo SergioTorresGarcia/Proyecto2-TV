@@ -16,7 +16,7 @@ body {
     width: 40em;
     height: 30em;
     margin:10em 20em 0 -60em;
-    background-color: rgb(255, 0, 144); /* <<< ---------------- MAIN PICTURE - PROGRAMES -------------- */
+    background-color: pink; /* <<< ---------------- MAIN PICTURE - PROGRAMES -------------- */
     z-index: 1;
 }
 .marco {
@@ -40,7 +40,7 @@ body {
     height: 48em;
 }
 
-#greenLight {
+#greenLight {     /* <<< ---------------- GREENLIGHT - lights up when tv is on (red when stand by?) -------------- */
     width: 3.5em;
     height: 0.9em;
     border: .1em solid lightgray;
@@ -74,9 +74,23 @@ body {
 
     justify-content: flex-end;
 }
-
 #displayLine {
-    background-color: pink;
+    margin-top: -36em;
+    margin-left: 25em;
+    position: absolute;
+    z-index: 150;
+    display: flex;
+    flex-direction:row;
+}
+.display {
+    margin:1em;
+    z-index: 150;
+    background-color: rgba(128, 128, 128, 0.300);
+    color: white;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    font-size: smaller;
 }
 a {
     text-decoration: none;
@@ -132,11 +146,11 @@ button {
     border-radius: 0 50% 50% 0;
     margin: 1.5em 0.7em 1.5em 0;
 }
-#redBtn:hover, 
-.lessVolume:hover,
-.moreVolume:hover,
-.btn:hover {
-    transition: 0.5s;
+#redBtn:active, 
+.lessVolume:active,
+.moreVolume:active,
+.btn:active {
+    transition: 0.1s;
     opacity: 0.75;
 }
 #btns {

@@ -5,20 +5,26 @@ let imageMain = document.getElementById("Image")
 let redBtn = document.getElementById("redBtn")
 let greenLight = document.getElementById("greenLight")
 
-redBtn.onclick = changeColor;
+// redBtn.onclick = changeColor;
 
-function changeColor(imageMain){
-    return imageMain.style.background = black;
-} 
+// function changeColor(imageMain){
+//     return imageMain.style.background = black;
+// } 
 
 redBtn.addEventListener("click", function() {
     
-    document.getElementById("redBtn").style.backgroundColor = black;
+    redBtn.style.background = black;
+    greenLight.style.backgroundColor= darkred;
   })
 
 // VOLUME functions
 let moreVolume = document.getElementById("moreVolume")
 let lessVolume = document.getElementById("lessVolume")
+
+// STAMPS (channel, time, date)
+let displayChannel = document.getElementById("displayChannel")
+let displayDay = document.getElementById("displayDay")
+let displayTime = document.getElementById("displayTime")
 
 // CHANNEL functions
 let btn1 = document.getElementById("btn1")
