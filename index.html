@@ -1,13 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto 2 - TV</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    
+    <div class="container-fluid">
+        <div id="tvAround" class="">
+            <div id="greenLight"></div> <!-- green light when ON -->
+
+            <!-- TV -->
+            <div id="screen" class="">
+
+                <div class="marco">
+                    <img src="./img/TV2.png" alt="old school TV">
+                    <div id="image"></div> <!-- ----------------------------- MAIN PICTURE - PROGRAMES -->
+                </div>
+                <div id="displayLine">
+                    <div class="display" id="displayChannel"></div>
+                    <div class="display" id="displayTime"></div>
+                    <div class="display" id="displayDay"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- REMOTE -->
+        <div id="mandoAround" class="">
+            <div id="mando">
+                <div id="mando2">
+                    <div id="btns">
+                        <a href="#">
+                            <div id="redBtn">
+                                <button>
+                                    <div>ON/OFF</div>
+                                </button>
+                            </div>
+                        </a>
+                        <div id="volumeBtns">
+                            <a href="#"><button>
+                                    <div class="lessVolume">
+                                        <div class="numbers">vol -</div>
+                                    </div>
+                                </button></a>
+                            <a href="#"><button>
+                                    <div class="moreVolume">
+                                        <div class="numbers">vol +</div>
+                                    </div>
+                                </button></a>
+                        </div>
+                        <div class="colbtn">
+                            <a href="#"><button>
+                                <div class="btn" id="btn1">
+                                    <div>CH</div>
+                                    <div class="numbers">1</div>
+                                </div>
+                            </button></a>
+                            <a href="#"><button>
+                                <div class="btn" id="btn2">
+                                    <div>CH</div>
+                                    <div class="numbers">2</div>
+                                </div>
+                            </button></a>
+
+                        </div>
+                        <div class="colbtn">
+                            <a href="#"><button>
+                                <div class="btn" id="btn3">
+                                    <div>CH</div>
+                                    <div class="numbers">3</div>
+                                </div>
+                            </button></a>
+                            <a href="#"><button>
+                                <div class="btn" id="btn4">
+                                    <div>CH</div>
+                                    <div class="numbers">4</div>
+                                </div>
+                            </button></a>
+                        </div>
+                        <div class="colbtn">
+                            <a href="#"><button>
+                                <div class="btn" id="btn5">
+                                    <div>CH</div>
+                                    <div class="numbers">5</div>
+                                </div>
+                            </button></a>
+                            <a href="#"><button>
+                                <div class="btn" id="btn6">
+                                    <div>CH</div>
+                                    <div class="numbers">6</div>
+                                </div>
+                            </button></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <script src="./js/main.js"></script>
 </body>
+
 </html>

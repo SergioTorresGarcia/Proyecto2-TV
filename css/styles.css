@@ -1,0 +1,175 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container-fluid {
+    display: flex;
+    width: 100vw;
+    max-height: 100vh;
+    background-color: rgb(148, 148, 148);
+}
+#image {
+    width: 40em;
+    height: 30em;
+    margin:10em 20em 0 -60em;
+    background-color: rgb(255, 0, 144); /* <<< ---------------- MAIN PICTURE - PROGRAMES -------------- */
+    z-index: 1;
+}
+.marco {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.marco img {
+    padding: 0;
+    height: 48em; /* keeps tv size */
+    /* border:1px solid black; */
+    z-index: 100;
+}
+#mandoAround{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(148, 148, 148);
+    width: 50em;
+    height: 48em;
+}
+
+#greenLight {
+    width: 3.5em;
+    height: 0.9em;
+    border: .1em solid lightgray;
+    position: absolute;
+    background-color: rgba(0, 255, 115, 0.429);
+    margin: 38.9em 0 0 52em;
+    z-index: 150;
+}
+
+#mando {
+    border:1em solid black;
+    background-color: rgb(112, 112, 112);
+    border-radius: 2em;
+    
+    width: 10em;
+    height: 25em;
+
+    display: flex;
+    flex-direction: column;
+
+}
+#mando2 {
+    border-radius: 1em;
+    margin: 0.25em 0 0 0.25em;
+    border: 0.25em solid black;
+    width: 9em;
+    height: 24em;
+    
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+}
+
+#displayLine {
+    background-color: pink;
+}
+a {
+    text-decoration: none;
+}
+#redBtn {
+    background-color: darkred;
+    border: 0.1em double rgb(66, 7, 7);
+    border-radius: 50%;
+    color: lightgray;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    margin: 0em 1em 0 1em;
+    height: 2.5em;
+}
+button {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+#volumeBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.lessVolume, .moreVolume {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8em;
+    background-color: black;
+    border: 0.2em double rgb(56, 55, 55);
+    color: lightgray;
+    height: 4.5em;
+    text-align: center;
+}
+.lessVolume{  
+    padding-left: 2em;
+    border-radius: 50% 0 0 50%;
+    margin: 1.5em 0 1.5em 0.7em;
+}
+.moreVolume {
+    padding-right: 2em;
+    border-radius: 0 50% 50% 0;
+    margin: 1.5em 0.7em 1.5em 0;
+}
+#redBtn:hover, 
+.lessVolume:hover,
+.moreVolume:hover,
+.btn:hover {
+    transition: 0.5s;
+    opacity: 0.75;
+}
+#btns {
+    display: flex;
+    flex-direction: column;
+    /* align-items: space-around;
+    justify-content: center; */
+    
+}
+.colbtn {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+}
+.btn {
+    height: 3em;
+    width: 3em;
+    border-radius: 30%;
+    border: 0.2em double rgb(56, 55, 55);
+    margin: 0 0.5em 0.5em 0.5em;
+    background-color: black;
+    color: lightgray;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn span {
+    margin-top: 2.5em;
+}
+.numbers {
+    scale: 1.5;
+}
+
