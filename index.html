@@ -24,7 +24,7 @@
 
             </div>
             <div id="displayLine">     <!-- ----------------------------- INFORMATION - Channel / Time / Date -->
-                    <div class="display" id="displayChannel">CHANNEL 4</div>
+                    <div class="display" id="displayChannel"></div>
                     <div class="display" id="displayDay">07 / 02 / 24</div>
                     <div class="display" id="displayTime">00 : 00 : AM</div>
                 </div>
@@ -37,8 +37,11 @@
                 <div id="mando2">
                     <div id="btns">
                         <a href="#">
-                            <div id="redBtn">
-                                <button>
+                            <div id="redBtn"> <!-- onclick="displayDay.innerHTML = Date().Day -->
+                                <!-- onclick="displayChannel.innerHTML = 'CHANNEL 5'; setTimeout(function(){displayChannel.innerHTML = ''}, 2000)" -->
+                                <button  type="button" onclick="
+                                displayDay.innerHTML = Date(); setTimeout(function(){displayDay.innerHTML = ''}, 3000)
+                                document.getElementById('greenLight').style.background= darkred;">
                                     <div>ON/OFF</div>
                                 </button>
                             </div>
@@ -56,13 +59,13 @@
                                 </button></a>
                         </div>
                         <div class="colbtn">
-                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 1'">
+                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 1'; setTimeout(function(){displayChannel.innerHTML = ''}, 2000)">
                                 <div class="btn" id="btn1">
                                     <div>CH</div>
                                     <div class="numbers">1</div>
                                 </div>
                             </button></a>
-                            <a href="#"><button>
+                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 2'; setTimeout(function(){displayChannel.innerHTML = ''}, 2000)">
                                 <div class="btn" id="btn2">
                                     <div>CH</div>
                                     <div class="numbers">2</div>
@@ -71,13 +74,13 @@
 
                         </div>
                         <div class="colbtn">
-                            <a href="#"><button>
+                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 3'; setTimeout(function(){displayChannel.innerHTML = ''}, 2000)">
                                 <div class="btn" id="btn3">
                                     <div>CH</div>
                                     <div class="numbers">3</div>
                                 </div>
                             </button></a>
-                            <a href="#"><button>
+                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 4'; setTimeout(function(){displayChannel.innerHTML = ''}, 2000)">
                                 <div class="btn" id="btn4">
                                     <div>CH</div>
                                     <div class="numbers">4</div>
@@ -85,13 +88,13 @@
                             </button></a>
                         </div>
                         <div class="colbtn">
-                            <a href="#"><button>
+                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 5'; setTimeout(function(){displayChannel.innerHTML = ''}, 2000)">
                                 <div class="btn" id="btn5">
                                     <div>CH</div>
                                     <div class="numbers">5</div>
                                 </div>
                             </button></a>
-                            <a href="#"><button>
+                            <a href="#"><button type="button" onclick="displayChannel.innerHTML = 'CHANNEL 6'; setTimeout(function(){displayChannel.innerHTML = ''}, 2000)">
                                 <div class="btn" id="btn6">
                                     <div>CH</div>
                                     <div class="numbers">6</div>

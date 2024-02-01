@@ -21,10 +21,12 @@ redBtn.addEventListener("click", function() {
 let moreVolume = document.getElementById("moreVolume")
 let lessVolume = document.getElementById("lessVolume")
 
-// STAMPS (channel, time, date)
+// STAMPS (channel, time, date)    .innerHTML = Date()">
 let displayChannel = document.getElementById("displayChannel")
 let displayDay = document.getElementById("displayDay")
 let displayTime = document.getElementById("displayTime")
+
+
 
 // CHANNEL functions
 let btn1 = document.getElementById("btn1")
