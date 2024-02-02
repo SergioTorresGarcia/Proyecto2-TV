@@ -40,14 +40,20 @@ body {
     height: 48em;
 }
 
-.greenDot {     /* <<< ---------------- GREENLIGHT - lights up when tv is on (red when stand by?) -------------- */
+#signal {     /* <<< ---------------- GREEN/RED LIGHT - lights up when tv is on (red when stand by?) -------------- */
     width: 3.5em;
     height: 0.9em;
     border: .1em solid lightgray;
     position: absolute;
-    background-color: rgba(0, 255, 115, 0.429);
+    
     margin: 38.9em 0 0 52em;
     z-index: 150;
+}
+.greenDot {
+    background-color: rgba(0, 255, 115, 0.429);
+}
+.redDot {
+    background-color: rgba(255, 0, 0, 0.429);
 }
 
 #mando {
@@ -74,23 +80,33 @@ body {
 
     justify-content: flex-end;
 }
-#displayLine {
-    margin-top: -36em;
-    margin-left: 25em;
+#displayChannelScreen, #displayChannel, #displayDay, #displayTime {
+    margin-top: -43em;
+    margin-left: 30em;
     position: absolute;
     z-index: 150;
     display: flex;
     flex-direction:row;
-}
-.display {
-    margin:1em;
-    z-index: 150;
-    background-color: rgba(128, 128, 128, 0.300);
-    color: white;
-    display: flex;
-    flex-direction:row;
     justify-content: center;
     font-size: smaller;
+    /* background-color: rgba(128, 128, 128, 0.300); */
+    color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#displayChannel {
+    margin-top: -45em;
+    margin-left: 67em;
+    
+}
+#displayDay {
+    margin-top: -43em;
+    margin-left: 67em;
+    
+}
+#displayTime {
+    margin-top: -41em;
+    margin-left: 67em;
+    
 }
 a {
     text-decoration: none;
@@ -197,8 +213,6 @@ button {
 .ch1{
     background-image: url(../img/ch1.jpeg);
     background-size:cover;
-    /* background-position-y: center;
-    background-repeat: no-repeat; */
 }
 .ch2{
     background-image: url(../img/ch2.jpeg);
@@ -217,7 +231,7 @@ button {
     background-size:cover;
 }
 .ch6{
-    background-image: url(../img/ch6.jpg);
+    background-image: url(../img/ch6.jpeg);
     background-size:cover;
 }
 
