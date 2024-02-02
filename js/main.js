@@ -77,45 +77,17 @@ arrayBtns.map(
       displayDay.innerHTML = currentDate + " 1999";
       displayTime.innerHTML = currentTime;
 
-        switch (item.id) {
-        case "btn1":
-          image.classList.add("ch1");
-          displayChannel.innerHTML = 'CHANNEL 1';
-          displayChannelScreen.innerHTML = 'CHANNEL 1';
-          setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
-          break;
-        case "btn2":
+      /* 
+      For each item(btn), slicing the last character of theit id (i.e. btn1) 
+      we get the number we add to the class with the new image and to the onscreen display innerHTML texts 
+      */
+      let num = item.id.slice(-1)
 
-          image.classList.add("ch2");
-          displayChannel.innerHTML = 'CHANNEL 2';
-          displayChannelScreen.innerHTML = 'CHANNEL 2';
-          setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
-          break;
-        case "btn3":
-          image.classList.add("ch3");
-          displayChannel.innerHTML = 'CHANNEL 3';
-          displayChannelScreen.innerHTML = 'CHANNEL 3';
-          setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
-          break;
-        case "btn4":
-          image.classList.add("ch4");
-          displayChannel.innerHTML = 'CHANNEL 4';
-          displayChannelScreen.innerHTML = 'CHANNEL 4';
-          setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
-          break;
-        case "btn5":
-          image.classList.add("ch5");
-          displayChannel.innerHTML = 'CHANNEL 5';
-          displayChannelScreen.innerHTML = 'CHANNEL 5';
-          setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
-          break;
-        case "btn6":
-          image.classList.add("ch6");
-          displayChannel.innerHTML = 'CHANNEL 6';
-          displayChannelScreen.innerHTML = 'CHANNEL 6';
-          setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
-          break;
-      }
+      image.classList.add("ch" + num);
+      displayChannel.innerHTML = 'CHANNEL ' + num;
+      displayChannelScreen.innerHTML = 'CHANNEL ' + num;
+      setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
+
     }
   }
   ))
