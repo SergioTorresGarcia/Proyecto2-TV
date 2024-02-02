@@ -6,18 +6,18 @@ body {
     max-height: 100vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.container-fluid {
+.container {
     display: flex;
     width: 100vw;
     max-height: 100vh;
     background-color: rgb(148, 148, 148);
 }
-#image {
-    width: 40em;
-    height: 30em;
+#image {    /* <<< ---------------- MAIN PICTURE - PROGRAMES -------------- */
+    width: 610px;
+    height: 470px;
     margin:10em 20em 0 -60em;
-    background-color: pink; /* <<< ---------------- MAIN PICTURE - PROGRAMES -------------- */
-    z-index: 1;
+
+    z-index: 1; 
 }
 .marco {
     display: flex;
@@ -40,7 +40,7 @@ body {
     height: 48em;
 }
 
-#greenLight {     /* <<< ---------------- GREENLIGHT - lights up when tv is on (red when stand by?) -------------- */
+.greenDot {     /* <<< ---------------- GREENLIGHT - lights up when tv is on (red when stand by?) -------------- */
     width: 3.5em;
     height: 0.9em;
     border: .1em solid lightgray;
@@ -185,5 +185,39 @@ button {
 }
 .numbers {
     scale: 1.5;
+}
+
+.blackScreen {
+    background-color: black;
+}
+.static {
+    background-image: url(../img/tvstatic.gif);
+    background-size:cover;
+}
+.ch1{
+    background-image: url(../img/ch1.jpeg);
+    background-size:cover;
+    /* background-position-y: center;
+    background-repeat: no-repeat; */
+}
+.ch2{
+    background-image: url(../img/ch2.jpeg);
+    background-size:cover;
+}
+.ch3{
+    background-image: url(../img/ch3.jpeg);
+    background-size:cover;
+}
+.ch4{
+    background-image: url(../img/ch4.jpg);
+    background-size:cover;
+}
+.ch5{
+    background-image: url(../img/ch5.jpeg);
+    background-size:cover;
+}
+.ch6{
+    background-image: url(../img/ch6.jpg);
+    background-size:cover;
 }
 
