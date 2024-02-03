@@ -36,12 +36,13 @@ let arrayTvVolBtns = Array.from(tvVolBtns)
 On-off button toggles between blackscreen and static.
 It blocks other channels (when tv is off channel buttons don´t work)
 */
-redBtn.addEventListener("click", (e) => {
+
+
+const onOff = function() {
   let lastClass = image.classList[image.classList.length - 1];
   // The red button removes last class and adds a new one (images are loaded as background-image)
   // Temporary onscreen message display
   if (lastClass == "blackScreen") {
-
     image.classList.remove("blackScreen")
     image.classList.add("static")
     displayChannelScreen.innerHTML = 'NO CHANNEL';
@@ -50,8 +51,6 @@ redBtn.addEventListener("click", (e) => {
     displayDay.innerHTML = currentDate + " 1999";
     displayTime.innerHTML = currentTime;
     displayChannel.innerHTML = '   ---   ';
-    
-
   } else if (lastClass != "blackScreen") {
     // Small standby red light lights up when the TV is on
     image.classList.remove(lastClass)
@@ -64,14 +63,13 @@ redBtn.addEventListener("click", (e) => {
     displayChannelScreen.innerHTML = '';
     const btn = document.getElementsByClassName("levelVol")
     let arraybtn = Array.from(btn)
-    // for (item in arraybtn) {
-    //   item.classList.remove("onVol");
-    // }
     arraybtn.forEach(item => item.classList.remove("onVol"))
     count = 0;
   }
-})
+}
 
+redBtn.addEventListener("click", onOff)
+mainBtn.addEventListener("click", onOff)
 
 
 
@@ -83,87 +81,57 @@ redBtn.addEventListener("click", (e) => {
 // Mapping an array of channels, each button removes last class and adds a new one (with its picture)
 // Small red light, changes to green when any channel is selected
 // The selected channel name is displayed for 3 seconds after clicking the button
-arrayBtns.map(
-  item => item.addEventListener("click", (e) => {
-    let lastClass = image.classList[image.classList.length - 1];
 
-    if (lastClass != "blackScreen") {
-      image.classList.remove(lastClass);
-      signal.classList.remove("redDot");
-      signal.classList.add("greenDot");
-      displayDay.innerHTML = currentDate + " 1999";
-      displayTime.innerHTML = currentTime;
+const channelControl = function () {
+  let lastClass = image.classList[image.classList.length - 1];
 
-      /*
-      For each item(btn), slicing the last character of theit id (i.e. btn1)
-      we get the number we add to the class with the new image and to the onscreen display innerHTML texts
-      */
-      let num = item.id.slice(-1)
+  if (lastClass != "blackScreen") {
+    image.classList.remove(lastClass);
+    signal.classList.remove("redDot");
+    signal.classList.add("greenDot");
+    displayDay.innerHTML = currentDate + " 1999";
+    displayTime.innerHTML = currentTime;
 
-      image.classList.add("ch" + num);
-      displayChannel.innerHTML = 'CHANNEL ' + num;
-      displayChannelScreen.innerHTML = 'CHANNEL ' + num;
-      setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
+    /*
+    For each item(btn), slicing the last character of theit id (i.e. btn1)
+    we get the number we add to the class with the new image and to the onscreen display innerHTML texts
+    */
+    let num = item.id.slice(-1)
 
-    }
+    image.classList.add("ch" + num);
+    displayChannel.innerHTML = 'CHANNEL ' + num;
+    displayChannelScreen.innerHTML = 'CHANNEL ' + num;
+    setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
+
   }
-  ))
+}
 
-arrayTvBtns.map(
-  item => item.addEventListener("click", () => {
-    let lastClass = image.classList[image.classList.length - 1];
+arrayBtns.map(item => item.addEventListener("click", channelControl))
+arrayTvBtns.map(item => item.addEventListener("click", channelControl))
 
-    if (lastClass != "blackScreen") {
-      image.classList.remove(lastClass);
-      signal.classList.remove("redDot");
-      signal.classList.add("greenDot");
-      displayDay.innerHTML = currentDate + " 1999";
-      displayTime.innerHTML = currentTime;
 
-      let num = item.id.slice(-1)
-
-      image.classList.add("cc" + num);
-      displayChannel.innerHTML = 'CHANNEL ' + num;
-      displayChannelScreen.innerHTML = 'CHANNEL ' + num;
-      setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
-
-    }
-  }
-  ))
+// VOLUME (remote and tv)
 
 let count = 1;
-moreVolume.addEventListener("click", (e) => {
+const volumeUp = function () {
   let lastClass = image.classList[image.classList.length - 1];
   if (lastClass != "blackScreen") {
     let btn = document.getElementById("lvl" + count);
     count += 1;
     btn.classList.add("onVol");
   }
-})
+}
+moreVolume.addEventListener("click", volumeUp)
+moreTvVolume.addEventListener("click", volumeUp)
 
-moreTvVolume.addEventListener("click", (e) => {
-  let lastClass = image.classList[image.classList.length - 1];
-  if (lastClass != "blackScreen") {
-    let btn = document.getElementById("lvl" + count);
-    count += 1;
-    btn.classList.add("onVol");
-  }
-})
-
-lessVolume.addEventListener("click", (e) => {
+const volumeDown = function () {
   let lastClass = image.classList[image.classList.length - 1];
   if (lastClass != "blackScreen") {
     let btn = document.getElementById("lvl" + count);
     count -= 1;
     btn.classList.remove("onVol");
   }
-})
+}
+lessVolume.addEventListener("click", volumeDown)
+lessTvVolume.addEventListener("click", volumeDown)
 
-lessTvVolume.addEventListener("click", (e) => {
-  let lastClass = image.classList[image.classList.length - 1];
-  if (lastClass != "blackScreen") {
-    let btn = document.getElementById("lvl" + count);
-    count -= 1;
-    btn.classList.remove("onVol");
-  }
-})

@@ -47,12 +47,23 @@ body {
 
 #signal {     /* <<< ---------------- GREEN/RED LIGHT - lights up when tv is on (red when stand by?) -------------- */
     width: 3.5em;
-    height: 0.9em;
+    height: 1em;
     border: .1em solid lightgray;
     position: absolute;
     
-    margin: 38.9em 0 0 52em;
+    margin: 38.8em 0 0 52em;
     z-index: 150;
+}
+#mainBtn {
+    width: 1em;
+    height: 1em;
+    border: .1em solid lightgray;
+    position: absolute;
+    background-color: silver;
+    margin: 38.8em 0 0 57em;
+    z-index: 900;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .greenDot {
     background-color: rgba(0, 255, 115, 0.429);
