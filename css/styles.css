@@ -108,6 +108,8 @@ body {
 }
 .grayText {
     color: gray;
+    font-size: small;
+    margin-bottom: 0.2em;
 }
 #displayChannelScreen {
     margin-top: -28em;
@@ -300,11 +302,22 @@ button {
     z-index: 999;
     background-color: rgb(23, 23, 23);
 }
-.levelVol:hover {
+/* .levelVol:hover {
     background-color: rgb(7, 67, 1)
-}
+} */
 .levelVol>div {
     padding-left:2.5em;
     color: gray;
-    
+}
+.onVol {
+    background-color: rgb(7, 67, 1)
+}
+#volTvPlus:hover, #volTvMinus:hover {
+    background-color: darkred;
+}
+#volTvPlus {
+    margin-bottom: 0.8em;
+}
+#volTvMinus {
+    margin-top: 0.8em;
 }

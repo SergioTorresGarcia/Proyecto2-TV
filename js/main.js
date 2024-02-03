@@ -6,19 +6,12 @@ let image = document.getElementById("image")
 let redBtn = document.getElementById("redBtn")
 let signal = document.getElementById("signal")
 
-// VOLUME functions
-let moreVolume = document.getElementById("moreVolume")
-let lessVolume = document.getElementById("lessVolume")
-
 // CHANNEL buttons (1 to 6)
 const allBtns = document.getElementsByClassName("btn")
 let arrayBtns = Array.from(allBtns)
 
 const tvBtns = document.getElementsByClassName("btnTV")
 let arrayTvBtns = Array.from(tvBtns)
-
-
-
 
 // STAMPS (channel, time, date)    .innerHTML = Date()">
 let displayChannelScreen = document.getElementById("displayChannelScreen")
@@ -28,10 +21,20 @@ const currentDate = new Date().toDateString().slice(3, 10);
 let displayTime = document.getElementById("displayTime")
 const currentTime = new Date().toTimeString().slice(0, 8);
 
+// VOLUME functions
+let moreVolume = document.getElementById("volPlus")
+let moreTvVolume = document.getElementById("volTvPlus")
 
-/* 
+let lessVolume = document.getElementById("volMinus")
+let lessTvVolume = document.getElementById("volTvMinus")
+
+const tvVolBtns = document.getElementsByClassName("levelVol")
+let arrayTvVolBtns = Array.from(tvVolBtns)
+
+
+/*
 On-off button toggles between blackscreen and static.
-It blocks other channels (when tv is off channel buttons don´t work) 
+It blocks other channels (when tv is off channel buttons don´t work)
 */
 redBtn.addEventListener("click", (e) => {
   let lastClass = image.classList[image.classList.length - 1];
@@ -47,6 +50,7 @@ redBtn.addEventListener("click", (e) => {
     displayDay.innerHTML = currentDate + " 1999";
     displayTime.innerHTML = currentTime;
     displayChannel.innerHTML = '   ---   ';
+    
 
   } else if (lastClass != "blackScreen") {
     // Small standby red light lights up when the TV is on
@@ -58,6 +62,13 @@ redBtn.addEventListener("click", (e) => {
     displayTime.innerHTML = "";
     displayChannel.innerHTML = "";
     displayChannelScreen.innerHTML = '';
+    const btn = document.getElementsByClassName("levelVol")
+    let arraybtn = Array.from(btn)
+    // for (item in arraybtn) {
+    //   item.classList.remove("onVol");
+    // }
+    arraybtn.forEach(item => item.classList.remove("onVol"))
+    count = 0;
   }
 })
 
@@ -83,9 +94,9 @@ arrayBtns.map(
       displayDay.innerHTML = currentDate + " 1999";
       displayTime.innerHTML = currentTime;
 
-      /* 
-      For each item(btn), slicing the last character of theit id (i.e. btn1) 
-      we get the number we add to the class with the new image and to the onscreen display innerHTML texts 
+      /*
+      For each item(btn), slicing the last character of theit id (i.e. btn1)
+      we get the number we add to the class with the new image and to the onscreen display innerHTML texts
       */
       let num = item.id.slice(-1)
 
@@ -98,8 +109,8 @@ arrayBtns.map(
   }
   ))
 
-  arrayTvBtns.map(
-  item => item.addEventListener("click", (e) => {
+arrayTvBtns.map(
+  item => item.addEventListener("click", () => {
     let lastClass = image.classList[image.classList.length - 1];
 
     if (lastClass != "blackScreen") {
@@ -119,3 +130,40 @@ arrayBtns.map(
     }
   }
   ))
+
+let count = 1;
+moreVolume.addEventListener("click", (e) => {
+  let lastClass = image.classList[image.classList.length - 1];
+  if (lastClass != "blackScreen") {
+    let btn = document.getElementById("lvl" + count);
+    count += 1;
+    btn.classList.add("onVol");
+  }
+})
+
+moreTvVolume.addEventListener("click", (e) => {
+  let lastClass = image.classList[image.classList.length - 1];
+  if (lastClass != "blackScreen") {
+    let btn = document.getElementById("lvl" + count);
+    count += 1;
+    btn.classList.add("onVol");
+  }
+})
+
+lessVolume.addEventListener("click", (e) => {
+  let lastClass = image.classList[image.classList.length - 1];
+  if (lastClass != "blackScreen") {
+    let btn = document.getElementById("lvl" + count);
+    count -= 1;
+    btn.classList.remove("onVol");
+  }
+})
+
+lessTvVolume.addEventListener("click", (e) => {
+  let lastClass = image.classList[image.classList.length - 1];
+  if (lastClass != "blackScreen") {
+    let btn = document.getElementById("lvl" + count);
+    count -= 1;
+    btn.classList.remove("onVol");
+  }
+})
