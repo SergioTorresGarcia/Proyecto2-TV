@@ -14,6 +14,12 @@ let lessVolume = document.getElementById("lessVolume")
 const allBtns = document.getElementsByClassName("btn")
 let arrayBtns = Array.from(allBtns)
 
+const tvBtns = document.getElementsByClassName("btnTV")
+let arrayTvBtns = Array.from(tvBtns)
+
+
+
+
 // STAMPS (channel, time, date)    .innerHTML = Date()">
 let displayChannelScreen = document.getElementById("displayChannelScreen")
 let displayChannel = document.getElementById("displayChannel")
@@ -84,6 +90,28 @@ arrayBtns.map(
       let num = item.id.slice(-1)
 
       image.classList.add("ch" + num);
+      displayChannel.innerHTML = 'CHANNEL ' + num;
+      displayChannelScreen.innerHTML = 'CHANNEL ' + num;
+      setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
+
+    }
+  }
+  ))
+
+  arrayTvBtns.map(
+  item => item.addEventListener("click", (e) => {
+    let lastClass = image.classList[image.classList.length - 1];
+
+    if (lastClass != "blackScreen") {
+      image.classList.remove(lastClass);
+      signal.classList.remove("redDot");
+      signal.classList.add("greenDot");
+      displayDay.innerHTML = currentDate + " 1999";
+      displayTime.innerHTML = currentTime;
+
+      let num = item.id.slice(-1)
+
+      image.classList.add("cc" + num);
       displayChannel.innerHTML = 'CHANNEL ' + num;
       displayChannelScreen.innerHTML = 'CHANNEL ' + num;
       setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);

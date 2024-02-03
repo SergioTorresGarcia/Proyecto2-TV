@@ -204,12 +204,23 @@ button {
     text-align: center;
     vertical-align: middle;
 }
+.panelBtns {
+    position: absolute;
+    margin-top: -30em;
+    margin-left: 56em;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+.btnTV {
+    margin: 0.2em;
+    
+    z-index: 999;
+    background-color: red;
+}
 
 .btn span {
     margin-top: 2.5em;
-}
-.numbers {
-    scale: 1.5;
 }
 
 .blackScreen {
@@ -219,27 +230,27 @@ button {
     background-image: url(../img/tvstatic.gif);
     background-size:cover;
 }
-.ch1{
+.ch1, .cc1{
     background-image: url(../img/ch1.jpeg);
     background-size:cover;
 }
-.ch2{
+.ch2, .cc2{
     background-image: url(../img/ch2.jpeg);
     background-size:cover;
 }
-.ch3{
+.ch3, .cc3{
     background-image: url(../img/ch3.jpeg);
     background-size:cover;
 }
-.ch4{
+.ch4, .cc4{
     background-image: url(../img/ch4.jpg);
     background-size:cover;
 }
-.ch5{
+.ch5, .cc5{
     background-image: url(../img/ch5.jpeg);
     background-size:cover;
 }
-.ch6{
+.ch6, .cc6{
     background-image: url(../img/ch6.jpeg);
     background-size:cover;
 }
