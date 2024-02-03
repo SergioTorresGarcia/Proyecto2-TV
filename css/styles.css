@@ -206,17 +206,29 @@ button {
 }
 .panelBtns {
     position: absolute;
-    margin-top: -30em;
+    margin-top: -32.5em;
     margin-left: 56em;
     display: flex;
     flex-direction: column;
     z-index: 999;
 }
 .btnTV {
-    margin: 0.2em;
-    
+    margin: 0.3em 0.5em 0.3em 0.5em;
+    border-radius: 50%;
+    border:0.2em solid gray;
+    width:2em;
+    height:0.8em;
+
     z-index: 999;
-    background-color: red;
+    background-color: rgb(23, 23, 23);
+}
+.btnTV:hover {
+    background-color: darkred
+}
+.btnTV>div {
+    padding-left:2.5em;
+    color: gray;
+    
 }
 
 .btn span {
