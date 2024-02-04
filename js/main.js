@@ -135,7 +135,7 @@ arrayTvBtns.map(item => item.addEventListener("click", () => {
 
 
 // VOLUME (remote and tv)
-
+// Using a count variable outside the function, we add "+1" with every click of the button, so the next div gets the "light on" class
 let count = 1;
 const volumeUp = function () {
   let lastClass = image.classList[image.classList.length - 1];
@@ -148,6 +148,7 @@ const volumeUp = function () {
 moreVolume.addEventListener("click", volumeUp)
 moreTvVolume.addEventListener("click", volumeUp)
 
+//similarly the minus button references the same "count" variable
 const volumeDown = function () {
   let lastClass = image.classList[image.classList.length - 1];
   if (lastClass != "blackScreen") {
