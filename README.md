@@ -5,12 +5,12 @@
 
 ### Table of Contents 🗂️
 
-- [Stack 🛠️](#💻-stack)
-- [Introduction ℹ️](#🫵-challenge-introduction) 
-- [Coding process ➡️](#➡️-coding-process)
-- [Features 🌟](#🌟-features)
-- [Live Deployment 📡](#👀-preview)
-- [Author ✏️](#✏️-author)
+- [Stack 🛠️](#-stack)
+- [Introduction ℹ️](#-challenge-introduction) 
+- [Coding process ➡️](#-coding-process)
+- [Features 🌟](#-features)
+- [Live Deployment 📡](#-preview)
+- [Author ✏️](#-author)
 
 ##### 💻 Stack:
     
