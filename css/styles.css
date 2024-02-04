@@ -314,9 +314,7 @@ button {
     z-index: 999;
     background-color: rgb(23, 23, 23);
 }
-/* .levelVol:hover {
-    background-color: rgb(7, 67, 1)
-} */
+
 .levelVol>div {
     padding-left:2.5em;
     color: gray;
