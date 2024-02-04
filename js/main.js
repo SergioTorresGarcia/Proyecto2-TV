@@ -82,7 +82,32 @@ mainBtn.addEventListener("click", onOff)
 // Small red light, changes to green when any channel is selected
 // The selected channel name is displayed for 3 seconds after clicking the button
 
-const channelControl = function () {
+arrayBtns.map(
+  item => item.addEventListener("click", () => {
+    let lastClass = image.classList[image.classList.length - 1];
+  
+    if (lastClass != "blackScreen") {
+      image.classList.remove(lastClass);
+      signal.classList.remove("redDot");
+      signal.classList.add("greenDot");
+      displayDay.innerHTML = currentDate + " 1999";
+      displayTime.innerHTML = currentTime;
+  
+      /*
+      For each item(btn), slicing the last character of theit id (i.e. btn1)
+      we get the number we add to the class with the new image and to the onscreen display innerHTML texts
+      */
+      let num = item.id.slice(-1)
+  
+      image.classList.add("ch" + num);
+      displayChannel.innerHTML = 'CHANNEL ' + num;
+      displayChannelScreen.innerHTML = 'CHANNEL ' + num;
+      setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
+  
+    }
+  }))
+
+arrayTvBtns.map(item => item.addEventListener("click", () => {
   let lastClass = image.classList[image.classList.length - 1];
 
   if (lastClass != "blackScreen") {
@@ -104,10 +129,9 @@ const channelControl = function () {
     setTimeout(function () { displayChannelScreen.innerHTML = '' }, 3000);
 
   }
-}
+}))
 
-arrayBtns.map(item => item.addEventListener("click", channelControl))
-arrayTvBtns.map(item => item.addEventListener("click", channelControl))
+
 
 
 // VOLUME (remote and tv)

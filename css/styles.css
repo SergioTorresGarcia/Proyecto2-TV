@@ -121,6 +121,7 @@ body {
     color: gray;
     font-size: small;
     margin-bottom: 0.2em;
+    text-align: center;
 }
 #displayChannelScreen {
     margin-top: -28em;
