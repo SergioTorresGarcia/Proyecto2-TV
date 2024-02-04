@@ -7,7 +7,7 @@
 
 - [Stack 🛠️](#-stack)
 - [Introduction ℹ️](#-challenge-introduction) 
-- [Coding process ➡️](#-coding-process)
+- [Coding process ➡️](#-project-explanation)
 - [Features 🌟](#-features)
 - [Live Deployment 📡](#-preview)
 - [Author ✏️](#-author)
@@ -138,6 +138,7 @@ The idea of this project is to recreate an old TV with limited options (on/off, 
 ### 👀 Preview:
 Have a look at the deployed version here:  🚀 
 https://sergiotorresgarcia.github.io/Proyecto2-TV/
+<br><br>
 <img src="./img/preview.png" alt="preview old school TV">
 
 ### ✏️ Author:
