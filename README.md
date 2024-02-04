@@ -116,11 +116,6 @@ The idea of this project is to recreate an old TV with limited options (on/off, 
         - `const VolumeUp` and `const VolumeDown` use a `let count` variable outside the function, adding "+1" with every click of the button, so the next div gets the "light on" class.
 
 
-### 🚀 Have a look at the deployed version here: 
-https://sergiotorresgarcia.github.io/Proyecto2-TV/
-
-
-
 ### 🌟 Features 
 
 - On / Off function (blocking all other functionalities)
@@ -141,6 +136,8 @@ https://sergiotorresgarcia.github.io/Proyecto2-TV/
     - Volume level indicator - green light
 
 ### 👀 Preview:
+Have a look at the deployed version here:  🚀 
+https://sergiotorresgarcia.github.io/Proyecto2-TV/
 <img src="./img/preview.png" alt="preview old school TV">
 
 ### ✏️ Author:
