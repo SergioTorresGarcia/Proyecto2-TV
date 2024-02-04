@@ -44,7 +44,7 @@ functional user experience that simulates interaction with a real television. �
 ###  ➡️  Coding process:
 - ##### Coding time: 25 - 30 hours ⏳
   
-- ##### Project explanation: 💬
+### 💬 Project explanation:
 
 The idea of this project is to recreate an old TV with limited options (on/off, volume and channel buttons only) both on the TV itself and on the remote.
 
